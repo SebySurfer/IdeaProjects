@@ -605,36 +605,7 @@ public class Main {
          * 8. Hashtable (C): Synchronized hash table implementation.
          * 9. WeakHashMap (C): Hash table implementation with weak keys.
          *
-         * Hierarchy Overview:
-         * -------------------
-         * (I) Collection<E>
-         * ├── (I) List<E>
-         * │   ├── (C) ArrayList<E>
-         * │   ├── (C) LinkedList<E>
-         * │   ├── (C) Vector<E>
-         * │       └── (C) Stack<E>
-         * ├── (I) Set<E>
-         * │   ├── (C) HashSet<E>
-         * │   ├── (C) LinkedHashSet<E>
-         * │   └── (I) SortedSet<E>
-         * │       └── (C) TreeSet<E>
-         * └── (I) Queue<E>
-         *     ├── (C) LinkedList<E> (also implements Deque<E>)
-         *     ├── (C) PriorityQueue<E>
-         *     └── (C) ArrayDeque<E> (also implements Deque<E>)
-         *     └── (I) Deque<E>
-         *         ├── (C) LinkedList<E> (also implements List<E> and Queue<E>)
-         *         └── (C) ArrayDeque<E> (also implements Queue<E>)
-         *
-         * (I) Map<K, V>
-         * ├── (C) HashMap<K, V>
-         * ├── (C) LinkedHashMap<K, V>
-         * ├── (I) SortedMap<K, V>
-         * │   └── (C) TreeMap<K, V>
-         * ├── (C) Hashtable<K, V>
-         * └── (C) WeakHashMap<K, V>
-         *
-         */
+
 
 
 
@@ -675,9 +646,18 @@ public class Main {
 
 //----------------------------------------------------------------------------------------------------------------------
 
-        //Lists
+        //List Interface
 
         /*
+
+         * ├── (I) List<E>
+         * │   ├── (C) ArrayList<E>
+         * │   ├── (C) LinkedList<E>
+         * │   ├── (C) Vector<E>
+         * │       └── (C) Stack<E>
+
+
+
         List is an interface from java library that enables you to modify the storage capacity of an array,
         basically just acting as a list
 
@@ -691,6 +671,7 @@ public class Main {
         * The variable type has to be declared in its full name, in other words,
         it doesn't use primitive types (meaning int, double, char, etc... How we usually call them).
         These are called 'Wrapper Class':
+
 
 
         ********************************************* IMPORTANT NOTE!!! ************************************************
@@ -940,6 +921,13 @@ public class Main {
         //Vector Class (Implements List interface)
 
         /*
+
+         * ├── (I) List<E>
+         * │   ├── (C) ArrayList<E>
+         * │   ├── (C) LinkedList<E>
+         * │   ├── (C) Vector<E>
+         * │       └── (C) Stack<E>
+
         Vectors are exactly the same as ArrayLists and LinkedLists, however, there's a great difference in performance.
 
         Main difference between the other object list classes and vectors:
@@ -1077,6 +1065,15 @@ public class Main {
         //Stack Class
 
         /*
+
+         * ├── (I) List<E>
+         * │   ├── (C) ArrayList<E>
+         * │   ├── (C) LinkedList<E>
+         * │   ├── (C) Vector<E>
+         * │       └── (C) Stack<E>
+
+
+
         In simple terms, think of a stack like a pile of plates in a cafeteria. When you add a new plate, you put it
         on top of the pile. When you want to take a plate, you take the one that's on the top of the pile.
 
@@ -1299,6 +1296,15 @@ public class Main {
         // Set Interface
 
         /*
+
+         * ├── (I) Set<E>
+         * │   ├── (C) HashSet<E>
+         * │   ├── (C) LinkedHashSet<E>
+         * │   └── (I) SortedSet<E>
+         * │       └── (C) TreeSet<E>
+
+
+
         - From the Java Collections Framework
         - Doesn't allow any duplicate items (even if you add duplicates)
         - Has no order of a list, or in any relation to an index
@@ -1327,16 +1333,11 @@ public class Main {
         - TreeSet = much slower, but the elements put into this set will be in their natural ordering
 
 
-        (Others)
+        (Others, Extra)
 
         - EnumSet
         - SortedHashSet
         - NavigableHash
-
-
-
-
-
 
          */
 
@@ -1392,7 +1393,13 @@ public class Main {
 
          /*
 
-
+         * (I) Map<K, V>
+         * ├── (C) HashMap<K, V>
+         * ├── (C) LinkedHashMap<K, V>
+         * ├── (I) SortedMap<K, V>
+         * │   └── (C) TreeMap<K, V>
+         * ├── (C) Hashtable<K, V>
+         * └── (C) WeakHashMap<K, V>
 
 
         The map interface is present in java.util package represents a mapping between a key and a value.
@@ -1410,12 +1417,6 @@ public class Main {
         The Map interface allows you to store these key-value pairs and perform various operations like adding new
         entries, removing entries, and looking up values based on their keys.
 
-         * (I) Map<K, V>
-         * ├── (C) HashMap<K, V>
-         * ├── (C) LinkedHashMap<K, V>
-         * ├── (C) TreeMap<K, V>
-         * ├── (C) Hashtable<K, V>
-         * └── (C) WeakHashMap<K, V>
 
 
         --> Classes:
@@ -1475,12 +1476,6 @@ public class Main {
          */
 
 
-
-
-
-
-        //--> Classes
-
         // * HashMap
 
         System.out.println("\n" + "Hashmap");
@@ -1514,9 +1509,6 @@ public class Main {
         System.out.println(studentList);
 
         System.out.println(studentList.get(3));
-
-
-
 
 
 
@@ -1555,7 +1547,6 @@ public class Main {
             System.out.println(alphaUnlinked.get(x));
 
         }
-
 
 
 
