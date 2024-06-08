@@ -548,6 +548,65 @@ public class Main {
         fellow programmers.
          */
 
+        /**
+
+         * Interfaces and Classes:
+         * -----------------------
+         * (I) Collection<E>
+         * ├── (I) List<E>
+         * │   ├── (C) ArrayList<E>
+         * │   ├── (C) LinkedList<E>
+         * │   ├── (C) Vector<E>
+         * │   └── (C) Stack<E>
+         * ├── (I) Set<E>
+         * │   ├── (C) HashSet<E>
+         * │   ├── (C) LinkedHashSet<E>
+         * │   └── (C) TreeSet<E>
+         * ├── (I) Queue<E>
+         * │   ├── (C) LinkedList<E> (also implements Deque<E>)
+         * │   ├── (C) PriorityQueue<E>
+         * │   └── (C) ArrayDeque<E> (also implements Deque<E>)
+         * └── (I) Deque<E>
+         *     ├── (C) LinkedList<E> (also implements List<E> and Queue<E>)
+         *     └── (C) ArrayDeque<E> (also implements Queue<E>)
+         *
+         * (I) Map<K, V>
+         * ├── (C) HashMap<K, V>
+         * ├── (C) LinkedHashMap<K, V>
+         * ├── (C) TreeMap<K, V>
+         * ├── (C) Hashtable<K, V>
+         * └── (C) WeakHashMap<K, V>
+
+
+         * Implementations:
+         * ----------------
+         * 1. List:
+         *    - ArrayList (C): Resizable-array implementation.
+         *    - LinkedList (C): Doubly-linked list implementation.
+         *    - Vector (C): Synchronized resizable-array implementation.
+         *    - Stack (C): LIFO stack implementation.
+         * 2. Set:
+         *    - HashSet (C): Hash table implementation.
+         *    - LinkedHashSet (C): Hash table and linked list implementation.
+         *    - TreeSet (C): Red-Black tree implementation.
+         * 3. Queue:
+         *    - LinkedList (C): Implements both List and Deque interfaces.
+         *    - PriorityQueue (C): Priority heap implementation.
+         *    - ArrayDeque (C): Resizable-array implementation.
+         * 4. Deque:
+         *    - LinkedList (C): Implements both List and Deque interfaces.
+         *    - ArrayDeque (C): Resizable-array implementation.
+         * 5. Map:
+         *    - HashMap (C): Hash table implementation.
+         *    - LinkedHashMap (C): Hash table and linked list implementation.
+         *    - TreeMap (C): Red-Black tree implementation.
+         *    - Hashtable (C): Synchronized hash table implementation.
+         *    - WeakHashMap (C): Hash table implementation with weak keys.
+
+
+         */
+
+
 
         //Collections Interface
         //---------------------
@@ -580,11 +639,6 @@ public class Main {
 
         printer.printCollection(someNames);
         printer.printCollection(someNumbers);
-
-
-
-
-
 
 
 
@@ -850,46 +904,6 @@ public class Main {
 
 
 
-
-
-
-
-//**********************************************************************************************************************
-        //Collection Framework
-
-        /*
-
-        Provides an architecture to store and manipulate a group of objects
-
-        Analogy:
-            Piggy Bank = Collection framework
-
-            Coins = Objects
-
-        The collection framework subdivides into three parts:
-        1. Interfaces = (top most position of the hierarchy), holds abstract classes
-        2. Classes
-        3. Algorithms
-
-
-        The Java Collections Framework holds 3 kinds of interfaces, and objects to their respective interface:
-        1. List:
-        - ArrayList
-        - LinkedList
-        - Vector
-
-        2. Queue:
-        - ArrayDeque
-            Deque:
-            - PriorityQueue
-
-        3. Set:
-        - HashSet
-        - LinkedHashSet
-            SortedSet:
-            - TreeSet
-
-         */
 
 //**********************************************************************************************************************
         //Vector Class (Implements List interface)
@@ -1250,7 +1264,96 @@ public class Main {
         System.out.println(newOrder);
 
 
+//**********************************************************************************************************************
+        // Set Interface
 
+        /*
+        - From the Java Collections Framework
+        - Doesn't allow any duplicate items (even if you add duplicates)
+        - Has no order of a list, or in any relation to an index
+
+
+        What is it used for, or when is it applied in ?
+        Whenever you want a collection of items and you don't want any duplicates and you don't particularly care
+        in what order they're in
+
+        Syntax = it is equal to using LinkedLists
+
+        Special Methods:
+        addAll() = allows you to get any collection and add all of its elements to another collection.
+        How ?
+
+        Set<WRAPPER_CLASS> NAME_OF_COLLECTION = new HashSet<>(OTHER_COLLECTION_TO_SET)
+
+        Implementations:
+
+        (Principle)
+
+        - HashSet = best preformance time inserting or retrieving, but with no ordering
+
+        - LinkedHashSet = slower, but keeps insertion ordering
+
+        - TreeSet = much slower, but the elements put into this set will be in their natural ordering
+
+
+        (Others)
+
+        - EnumSet
+        - SortedHashSet
+        - NavigableHash
+
+
+
+
+
+
+         */
+
+
+        //Hashet
+        Set<String> groceries = new HashSet<>();
+
+        groceries.add("Potato");
+        groceries.add("Salt");
+        groceries.add("Bread");
+        groceries.add("Butter");
+        groceries.add("Apple");
+
+        //Now lets try to add a few of the same items
+        groceries.add("Salt");
+        groceries.add("Butter");
+
+        System.out.println("HashSet List: "+groceries);
+
+
+        //LinkedHashet
+        Set<String> ordered_groceries = new LinkedHashSet<>(groceries);
+
+        System.out.println("LinkedHashSet List: "+ordered_groceries);
+
+        //HashMap
+
+        Set<String> nat_ord_groceries = new TreeSet<>(groceries);
+
+        System.out.println("TreeSet List: "+nat_ord_groceries);
+
+
+        //Here's another example in how you can first create a List and then add it to a Set
+
+        List<Integer> rep_numbers = new LinkedList<>();
+
+        rep_numbers.add(3);
+        rep_numbers.add(2);
+        rep_numbers.add(1);
+        rep_numbers.add(2);
+        rep_numbers.add(3);
+        rep_numbers.add(2);
+
+        System.out.println("List before adding to a Set: "+rep_numbers);
+
+        Set<Integer> unrep_numbers = new HashSet<>(rep_numbers);
+
+        System.out.println("List after adding to a Set: " + unrep_numbers);
 
 
 //**********************************************************************************************************************
@@ -1600,96 +1703,7 @@ public class Main {
         System.out.println(roomNumbers);
 
 
-//**********************************************************************************************************************
-        // Set Interface
 
-        /*
-        - From the Java Collections Framework
-        - Doesn't allow any duplicate items (even if you add duplicates)
-        - Has no order of a list, or in any relation to an index
-
-
-        What is it used for, or when is it applied in ?
-        Whenever you want a collection of items and you don't want any duplicates and you don't particularly care
-        in what order they're in
-
-        Syntax = it is equal to using LinkedLists
-
-        Special Methods:
-        addAll() = allows you to get any collection and add all of its elements to another collection.
-        How ?
-
-        Set<WRAPPER_CLASS> NAME_OF_COLLECTION = new HashSet<>(OTHER_COLLECTION_TO_SET)
-
-        Implementations:
-
-        (Principle)
-
-        - HashSet = best preformance time inserting or retrieving, but with no ordering
-
-        - LinkedHashSet = slower, but keeps insertion ordering
-
-        - TreeSet = much slower, but the elements put into this set will be in their natural ordering
-
-
-        (Others)
-
-        - EnumSet
-        - SortedHashSet
-        - NavigableHash
-
-
-
-
-
-
-         */
-
-
-        //Hashet
-        Set<String> groceries = new HashSet<>();
-
-        groceries.add("Potato");
-        groceries.add("Salt");
-        groceries.add("Bread");
-        groceries.add("Butter");
-        groceries.add("Apple");
-
-        //Now lets try to add a few of the same items
-        groceries.add("Salt");
-        groceries.add("Butter");
-
-        System.out.println("HashSet List: "+groceries);
-
-
-        //LinkedHashet
-        Set<String> ordered_groceries = new LinkedHashSet<>(groceries);
-
-        System.out.println("LinkedHashSet List: "+ordered_groceries);
-
-        //HashMap
-
-        Set<String> nat_ord_groceries = new TreeSet<>(groceries);
-
-        System.out.println("TreeSet List: "+nat_ord_groceries);
-
-
-        //Here's another example in how you can first create a List and then add it to a Set
-
-        List<Integer> rep_numbers = new LinkedList<>();
-
-        rep_numbers.add(3);
-        rep_numbers.add(2);
-        rep_numbers.add(1);
-        rep_numbers.add(2);
-        rep_numbers.add(3);
-        rep_numbers.add(2);
-
-        System.out.println("List before adding to a Set: "+rep_numbers);
-
-        Set<Integer> unrep_numbers = new HashSet<>(rep_numbers);
-
-        System.out.println("List after adding to a Set: " + unrep_numbers);
 
 
 //**********************************************************************************************************************
