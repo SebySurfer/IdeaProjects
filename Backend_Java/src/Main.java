@@ -1361,6 +1361,9 @@ public class Main {
 
          /*
 
+
+
+
         The map interface is present in java.util package represents a mapping between a key and a value.
 
         In Java, the Map interface is a way to store data in a structured format that consists of key-value pairs.
@@ -1376,52 +1379,71 @@ public class Main {
         The Map interface allows you to store these key-value pairs and perform various operations like adding new
         entries, removing entries, and looking up values based on their keys.
 
+         * (I) Map<K, V>
+         * ├── (C) HashMap<K, V>
+         * ├── (C) LinkedHashMap<K, V>
+         * ├── (C) TreeMap<K, V>
+         * ├── (C) Hashtable<K, V>
+         * └── (C) WeakHashMap<K, V>
+
 
         --> Classes:
 
         * HashMap:
-        Purpose: Implements the Map interface to store key-value pairs, where keys must be unique. It allows quick operations like insertion, search, and deletion based on the key index.
-        Ordering: Does not maintain any order of insertion.
-        Note: Not synchronized, allows null elements, but only one null key.
+        - Purpose: Implements the Map interface to store key-value pairs, where keys must be unique. It allows quick
+            operations like insertion, search, and deletion based on the key index.
+        - Ordering: Does not maintain any order of insertion.
+        - Note: Not synchronized, allows null elements, but only one null key.
 
         * LinkedHashMap:
-        Purpose: Similar to HashMap but maintains the order of insertion of elements.
-        Ordering: Maintains the insertion order of elements.
-        Note: Provides quick insertion, search, and deletion, while also preserving the order of insertion.
+        - Purpose: Similar to HashMap but maintains the order of insertion of elements.
+        - Ordering: Maintains the insertion order of elements.
+        - Note: Provides quick insertion, search, and deletion, while also preserving the order of insertion.
+
+        * TreeMap:
+        - Purpose: Implements both the Map and NavigableMap interfaces, storing key-value pairs sorted according to the
+            natural ordering of keys or a provided comparator.
+        - Ordering: Orders elements based on the natural ordering of keys or a custom comparator.
+        - Note: Provides efficient sorting and storing of key-value pairs.
+
+        * Hashtable:
+        - Purpose: Fast key-value lookup.
+        - Ordering: No guaranteed order of elements.
+        - Note: Collisions are managed using specific strategies to keep operations efficient.
 
         * WeakHashMap:
-        Purpose: Implements the Map interface to store weak references to its keys, allowing entries to be garbage-collected when their keys are no longer referenced.
-        Ordering: Behaves similarly to HashMap but removes entries when keys are no longer strongly referenced.
-        Note: Useful for implementing registry-like data structures.
+        - Purpose: Implements the Map interface to store weak references to its keys, allowing entries to be
+            garbage-collected when their keys are no longer referenced.
+        - Ordering: Behaves similarly to HashMap but removes entries when keys are no longer strongly referenced.
+        - Note: Useful for implementing registry-like data structures.
 
-        * EnumMap
 
-        --> Interfaces:
+        (Extra:)
+
+        * ConcurrentHashMap:
+        - Purpose: Implements the Map interface, providing a thread-safe alternative to HashMap for concurrent access
+            by multiple threads.
+        - Ordering: Does not guarantee any particular order of elements.
+        - Note: Introduced in Java 5, offers better performance in multi-threaded environments compared to HashMap.
+
+        --> Sub Interfaces:
 
         # SortedMap:
-        Purpose: An interface extending the Map interface, providing a total ordering of its elements based on the natural order of keys.
-        Ordering: Stores elements in sorted order based on keys.
-        Note: Implemented by TreeMap.
+        - Purpose: An interface extending the Map interface, providing a total ordering of its elements based on the
+            natural order of keys.
+        - Ordering: Stores elements in sorted order based on keys.
+        - Note: Implemented by TreeMap.
 
-        # NavigableMap:
-        Purpose: An extension of SortedMap, providing navigation methods like lowerKey, floorKey, ceilingKey, and higherKey, along with sub-map creation methods.
-        Ordering: Supports methods for navigation and sub-map creation based on keys.
-        Note: Provides convenient ways to navigate through map elements.
-
-        Implementations:
-
-        - TreeMap:
-        Purpose: Implements both the Map and NavigableMap interfaces, storing key-value pairs sorted according to the natural ordering of keys or a provided comparator.
-        Ordering: Orders elements based on the natural ordering of keys or a custom comparator.
-        Note: Provides efficient sorting and storing of key-value pairs.
-
-        - ConcurrentHashMap:
-        Purpose: Implements the Map interface, providing a thread-safe alternative to HashMap for concurrent access by multiple threads.
-        Ordering: Does not guarantee any particular order of elements.
-        Note: Introduced in Java 5, offers better performance in multi-threaded environments compared to HashMap.
+                # NavigableMap:
+                - Purpose: An extension of SortedMap, providing navigation methods like lowerKey, floorKey,
+                    ceilingKey, and higherKey, along with sub-map creation methods.
+                - Ordering: Supports methods for navigation and sub-map creation based on keys.
+                - Note: Provides convenient ways to navigate through map elements.
 
 
          */
+
+
 
 
 
@@ -1558,7 +1580,8 @@ public class Main {
         // deals with the top 3 best clients
         //However, we ignore the other two clients with the smallest buying price
 
-        double total_comission = (client_listings.get("Jacob") + client_listings.get("Lucia") + client_listings.get("Juan")) * 0.06;
+        double total_comission = (client_listings.get("Jacob") + client_listings.get("Lucia") +
+                client_listings.get("Juan")) * 0.06;
 
         //Now, lets disregard the clients we didn't tour in our list.
 
