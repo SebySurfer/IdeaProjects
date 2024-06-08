@@ -336,62 +336,6 @@ public class Main {
 
         System.out.println("Juans scores is " + Juan.yourAv((LinkedList<Double>) JuanList));
 
-
-//**********************************************************************************************************************
-        //Serialization
-
-        /*
-        In OOP, we create objects and we encapsulate their state or data. However, what if we want to share our
-        objects to a file, store it in a database or send it over the network? This is where serialization comes in.
-
-        Serialization = describes the process of taking an object’s state and transforming it into a stream of bytes.
-
-        1. A stream is an abstract definition of a sequence of data that is made available over time.
-        2. A byte is an 8 bit (0s or 1s) group of data.
-        3. A stream of bytes is a sequence of bytes that is made available over time.
-
-        Deserialization = process of taking into a stream of bytes and converting it back into objects
-
-        Key Notes:
-        - The stream of bytes created by serialization only includes the member variables of an object and not its
-        methods.
-        - Deserialization creates a copy of the original object. This copy shares the same state but is an entirely
-        new object in memory.
-        - Any fields declared as "transient"  or static aren't serialized, they're ignored
-            (but they must be used the same way for both classes, or the UID will be different)
-
-        SerialVersionUID = its a unique ID that functions like a version #, where it verifies that the
-        sender and receiver of a serialized object has loaded classes for that object that match.
-        - It's a way to ensure that to send and receive the data from an object is the same and won't have any errors
-        matching the two objects when stripping and unstripping the byte code.
-        - A SerialVersionUID will be calculated based on class properties, members, etc.
-        You can actually explicitly state what you want these numbers to be or represent.
-
-        NOTE: You are NOT changing the id itself, you're just giving a label to make it easier to manage.
-        This way, your computer will assign it to that label every time it calculates a class with exactly that
-        unique #ID
-
-        IMPORTANT NOTE: The class that you use for both the Serialization and deserialization have to be exactly the
-        same, even in its name. It's just as sensitive as a hash.
-
-        Manual Serialization
-        --------------------
-        In some cases, you might need to manually serialize a variable that cannot be directly
-        serialized by the default methods. For instance, if the variable is transient (which means it
-        is not serialized by default) or if it requires special handling, you can serialize it manually.
-        This approach is useful for fields that require special treatment or security measures.
-
-        Knowing these topics will improve your mastery of Java and allow you to persist your objects past
-        program termination or transport them over a network.
-
-
-
-         */
-
-
-        //You can find an example with the Serialization_Ex package
-
-
 //**********************************************************************************************************************
 
 //----------------------------------------------------------------------------------------------------------------------
@@ -585,6 +529,62 @@ public class Main {
 
         //Unboxing
         int unboxed = boxed;
+
+//**********************************************************************************************************************
+        //Serialization
+
+        /*
+        In OOP, we create objects and we encapsulate their state or data. However, what if we want to share our
+        objects to a file, store it in a database or send it over the network? This is where serialization comes in.
+
+        Serialization = describes the process of taking an object’s state and transforming it into a stream of bytes.
+
+        1. A stream is an abstract definition of a sequence of data that is made available over time.
+        2. A byte is an 8 bit (0s or 1s) group of data.
+        3. A stream of bytes is a sequence of bytes that is made available over time.
+
+        Deserialization = process of taking into a stream of bytes and converting it back into objects
+
+        Key Notes:
+        - The stream of bytes created by serialization only includes the member variables of an object and not its
+        methods.
+        - Deserialization creates a copy of the original object. This copy shares the same state but is an entirely
+        new object in memory.
+        - Any fields declared as "transient"  or static aren't serialized, they're ignored
+            (but they must be used the same way for both classes, or the UID will be different)
+
+        SerialVersionUID = its a unique ID that functions like a version #, where it verifies that the
+        sender and receiver of a serialized object has loaded classes for that object that match.
+        - It's a way to ensure that to send and receive the data from an object is the same and won't have any errors
+        matching the two objects when stripping and unstripping the byte code.
+        - A SerialVersionUID will be calculated based on class properties, members, etc.
+        You can actually explicitly state what you want these numbers to be or represent.
+
+        NOTE: You are NOT changing the id itself, you're just giving a label to make it easier to manage.
+        This way, your computer will assign it to that label every time it calculates a class with exactly that
+        unique #ID
+
+        IMPORTANT NOTE: The class that you use for both the Serialization and deserialization have to be exactly the
+        same, even in its name. It's just as sensitive as a hash.
+
+        Manual Serialization
+        --------------------
+        In some cases, you might need to manually serialize a variable that cannot be directly
+        serialized by the default methods. For instance, if the variable is transient (which means it
+        is not serialized by default) or if it requires special handling, you can serialize it manually.
+        This approach is useful for fields that require special treatment or security measures.
+
+        Knowing these topics will improve your mastery of Java and allow you to persist your objects past
+        program termination or transport them over a network.
+
+
+
+         */
+
+
+        //You can find an example with the Serialization_Ex package
+
+
 
 //----------------------------------------------------------------------------------------------------------------------
         //Collections Framework
