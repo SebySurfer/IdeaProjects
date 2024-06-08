@@ -548,6 +548,65 @@ public class Main {
         fellow programmers.
          */
 
+        /**
+
+         * Interfaces and Classes:
+         * -----------------------
+         * (I) Collection<E>
+         * ├── (I) List<E>
+         * │   ├── (C) ArrayList<E>
+         * │   ├── (C) LinkedList<E>
+         * │   ├── (C) Vector<E>
+         * │   └── (C) Stack<E>
+         * ├── (I) Set<E>
+         * │   ├── (C) HashSet<E>
+         * │   ├── (C) LinkedHashSet<E>
+         * │   └── (C) TreeSet<E>
+         * ├── (I) Queue<E>
+         * │   ├── (C) LinkedList<E> (also implements Deque<E>)
+         * │   ├── (C) PriorityQueue<E>
+         * │   └── (C) ArrayDeque<E> (also implements Deque<E>)
+         * └── (I) Deque<E>
+         *     ├── (C) LinkedList<E> (also implements List<E> and Queue<E>)
+         *     └── (C) ArrayDeque<E> (also implements Queue<E>)
+         *
+         * (I) Map<K, V>
+         * ├── (C) HashMap<K, V>
+         * ├── (C) LinkedHashMap<K, V>
+         * ├── (C) TreeMap<K, V>
+         * ├── (C) Hashtable<K, V>
+         * └── (C) WeakHashMap<K, V>
+
+
+         * Implementations:
+         * ----------------
+         * 1. List:
+         *    - ArrayList (C): Resizable-array implementation.
+         *    - LinkedList (C): Doubly-linked list implementation.
+         *    - Vector (C): Synchronized resizable-array implementation.
+         *    - Stack (C): LIFO stack implementation.
+         * 2. Set:
+         *    - HashSet (C): Hash table implementation.
+         *    - LinkedHashSet (C): Hash table and linked list implementation.
+         *    - TreeSet (C): Red-Black tree implementation.
+         * 3. Queue:
+         *    - LinkedList (C): Implements both List and Deque interfaces.
+         *    - PriorityQueue (C): Priority heap implementation.
+         *    - ArrayDeque (C): Resizable-array implementation.
+         * 4. Deque:
+         *    - LinkedList (C): Implements both List and Deque interfaces.
+         *    - ArrayDeque (C): Resizable-array implementation.
+         * 5. Map:
+         *    - HashMap (C): Hash table implementation.
+         *    - LinkedHashMap (C): Hash table and linked list implementation.
+         *    - TreeMap (C): Red-Black tree implementation.
+         *    - Hashtable (C): Synchronized hash table implementation.
+         *    - WeakHashMap (C): Hash table implementation with weak keys.
+
+
+         */
+
+
 
         //Collections Interface
         //---------------------
@@ -580,11 +639,6 @@ public class Main {
 
         printer.printCollection(someNames);
         printer.printCollection(someNumbers);
-
-
-
-
-
 
 
 
