@@ -10,6 +10,158 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
 
 //**********************************************************************************************************************
+        //Interfaces
+        /*
+        Definition = it's a template that can be applied to a class. Similar to inheritance, but specifies what a clas
+        has/must do, it cannot say HOW to do it.
+        Classes can apply more than one interface, however, inheritance is limited to 1 super class
+        (it cant inherit more than one super class)
+
+        In other words, an interface is simply an outline of what an object should have. Once you start creating
+        objects, the interface on itself is a guide to what methods should it implement. Every object will implement
+        the methods its own way, but will still retain an orderly fashion.
+
+        The cool thing about it, is that objects can implement more than just one interface.
+
+        3 Key rules:
+        1 - Abstract Methods = A class implementing an interface MUST provide implementations (overrides) for all
+        abstract methods from the interface, or else it will create errors.
+        2 - Default Methods = Interfaces can have default methods with actions provided, but it's needed to include
+        "default". This means that the class itself has an option to override the method or just keep the default
+        setting
+        3 - class may choose to use or not use the methods inherited from the interface based on its requirements.
+        It is not required to utilize every method declared in the interface.
+
+
+        Analogy to differentiate between Objects and Interfaces in Java:
+
+        Analogy: Building Construction
+
+        Class as a Blueprint:
+
+        Imagine a blueprint for constructing a house. This blueprint provides detailed instructions on how the house
+        should be built, including the layout, dimensions, materials, and features.
+        Similarly, a class in Java acts as a blueprint for creating objects. It defines the structure, behavior, and
+        state of objects of that class. Just like how a blueprint guides the construction of a house, a class guides
+        the creation and behavior of objects.
+        Interface as a Contract:
+
+        Now, consider a contract between a homeowner and a construction company. The contract specifies certain
+        requirements and expectations that the construction company must fulfill when building the house. For example,
+        it might specify the number of rooms, the quality of materials, and the completion timeline.
+        Similarly, an interface in Java acts as a contract between different parts of a program. It specifies a set of
+        methods that a class implementing the interface must provide. Just like how a contract defines obligations for
+        the construction company, an interface defines obligations for implementing classes.
+        Relationship:
+
+        In this analogy, the blueprint (class) provides a detailed plan for constructing a specific type of house,
+        while the contract (interface) specifies the requirements that any construction company (class) must meet to
+        be considered compliant.
+        A construction company (class) can work on multiple projects (implement multiple interfaces) by following
+        different contracts (implementing different interfaces) for each project. Similarly, a class can implement
+        multiple interfaces to fulfill different contractual obligations.
+        Flexibility:
+
+        The blueprint (class) dictates the specifics of how the house should be built, providing less flexibility
+        for customization during construction.
+        The contract (interface), however, allows for more flexibility because it only specifies the required behavior
+        without dictating how it should be implemented. This allows different classes to provide their own
+        implementations of the required behavior, promoting adaptability and interchangeability.
+
+
+         */
+
+
+        Creature goblin = new Creature();
+
+        Demigod Elius = new Demigod();
+
+        Human Knight = new Human();
+
+        goblin.spread_wings();
+
+        Elius.fireball();
+
+        Knight.shield();
+
+
+//**********************************************************************************************************************
+        //Lambdas
+
+        /*
+        Its a much shorter way to write anonymous classes with only one method
+        Where it needs to use a functional interface or a pre-defined functional interface (Java library), which are
+        basically interfaces that contain only one method.
+
+        How to use a lambda expression:
+        (arguments) -> {statement/s}
+
+
+
+        It simply shortens the amount of code needed to override the one method used when initializing an interface
+
+         */
+
+
+        /*
+        In the following example for button1, it's how we will typically instantiate an interface and use its method
+        with an overridden action.
+         */
+
+        String name1 = "Tommy";
+        MyInterface button1 = new MyInterface() {
+            @Override
+            public void pressButton(String x) {
+                System.out.println("Clicks the button and explodes " +x);
+
+            }
+        };
+        button1.pressButton(name1);
+
+
+        /*
+        Now, with a lambda, it is much shorter, more efficient and direct. Not saying that you HAVE to use lambdas, but
+        it creates optimization in terms of how you write your code.
+         */
+
+        String name2 = "Jeffry";
+
+        MyInterface button2 = (z) -> { System.out.println("Clicks a button and frcn dies " + z);};
+
+        button2.pressButton(name2);
+
+
+//**********************************************************************************************************************
+        //Enums
+
+        /*
+        Grouping or listing of constants, that behave similarly to objects, but cannot be changed
+
+        For example = days of the week, days of the month, list of planets in our solar system
+         */
+
+        //Let's create an enum with the values of the periodic table
+
+
+        //There's two ways you can carry these values, either with a specified name or the name already listed from
+        // the table itself
+
+        System.out.println("Nitrogen, also known as " + PeriodicTable.NITROGEN.chemicalSymbol
+                + ", is what largely makes up the atmosphere");
+
+        PeriodicTable substance = PeriodicTable.CARBON;
+
+        System.out.println("Oxygen, with an atomic number of "+substance.atomicNumber
+                +", only holds 15 % of our atmosphere");
+
+
+        //The greatest example is the open java libraries themselves, where people can create their own custom
+        //enums to hold values (like the value of PI for example) to make coding a lot easier.
+
+
+
+
+//**********************************************************************************************************************
         //INPUT and OUTPUT
 
         /*
@@ -1127,156 +1279,6 @@ public class Main {
         Therefore, it's often the preferred choice unless thread safety is explicitly required.
 
          */
-
-//**********************************************************************************************************************
-        //Interfaces
-        /*
-        Definition = it's a template that can be applied to a class. Similar to inheritance, but specifies what a clas
-        has/must do, it cannot say HOW to do it.
-        Classes can apply more than one interface, however, inheritance is limited to 1 super class
-        (it cant inherit more than one super class)
-
-        In other words, an interface is simply an outline of what an object should have. Once you start creating
-        objects, the interface on itself is a guide to what methods should it implement. Every object will implement
-        the methods its own way, but will still retain an orderly fashion.
-
-        The cool thing about it, is that objects can implement more than just one interface.
-
-        3 Key rules:
-        1 - Abstract Methods = A class implementing an interface MUST provide implementations (overrides) for all
-        abstract methods from the interface, or else it will create errors.
-        2 - Default Methods = Interfaces can have default methods with actions provided, but it's needed to include
-        "default". This means that the class itself has an option to override the method or just keep the default
-        setting
-        3 - class may choose to use or not use the methods inherited from the interface based on its requirements.
-        It is not required to utilize every method declared in the interface.
-
-
-        Analogy to differentiate between Objects and Interfaces in Java:
-
-        Analogy: Building Construction
-
-        Class as a Blueprint:
-
-        Imagine a blueprint for constructing a house. This blueprint provides detailed instructions on how the house
-        should be built, including the layout, dimensions, materials, and features.
-        Similarly, a class in Java acts as a blueprint for creating objects. It defines the structure, behavior, and
-        state of objects of that class. Just like how a blueprint guides the construction of a house, a class guides
-        the creation and behavior of objects.
-        Interface as a Contract:
-
-        Now, consider a contract between a homeowner and a construction company. The contract specifies certain
-        requirements and expectations that the construction company must fulfill when building the house. For example,
-        it might specify the number of rooms, the quality of materials, and the completion timeline.
-        Similarly, an interface in Java acts as a contract between different parts of a program. It specifies a set of
-        methods that a class implementing the interface must provide. Just like how a contract defines obligations for
-        the construction company, an interface defines obligations for implementing classes.
-        Relationship:
-
-        In this analogy, the blueprint (class) provides a detailed plan for constructing a specific type of house,
-        while the contract (interface) specifies the requirements that any construction company (class) must meet to
-        be considered compliant.
-        A construction company (class) can work on multiple projects (implement multiple interfaces) by following
-        different contracts (implementing different interfaces) for each project. Similarly, a class can implement
-        multiple interfaces to fulfill different contractual obligations.
-        Flexibility:
-
-        The blueprint (class) dictates the specifics of how the house should be built, providing less flexibility
-        for customization during construction.
-        The contract (interface), however, allows for more flexibility because it only specifies the required behavior
-        without dictating how it should be implemented. This allows different classes to provide their own
-        implementations of the required behavior, promoting adaptability and interchangeability.
-
-
-         */
-
-
-        Creature goblin = new Creature();
-
-        Demigod Elius = new Demigod();
-
-        Human Knight = new Human();
-
-        goblin.spread_wings();
-
-        Elius.fireball();
-
-        Knight.shield();
-
-
-//**********************************************************************************************************************
-        //Lambdas
-
-        /*
-        Its a much shorter way to write anonymous classes with only one method
-        Where it needs to use a functional interface or a pre-defined functional interface (Java library), which are
-        basically interfaces that contain only one method.
-
-        How to use a lambda expression:
-        (arguments) -> {statement/s}
-
-
-
-        It simply shortens the amount of code needed to override the one method used when initializing an interface
-
-         */
-
-
-        /*
-        In the following example for button1, it's how we will typically instantiate an interface and use its method
-        with an overridden action.
-         */
-
-        String name1 = "Tommy";
-        MyInterface button1 = new MyInterface() {
-            @Override
-            public void pressButton(String x) {
-                System.out.println("Clicks the button and explodes " +x);
-
-            }
-        };
-        button1.pressButton(name1);
-
-
-        /*
-        Now, with a lambda, it is much shorter, more efficient and direct. Not saying that you HAVE to use lambdas, but
-        it creates optimization in terms of how you write your code.
-         */
-
-        String name2 = "Jeffry";
-
-        MyInterface button2 = (z) -> { System.out.println("Clicks a button and frcn dies " + z);};
-
-        button2.pressButton(name2);
-
-
-//**********************************************************************************************************************
-        //Enums
-
-        /*
-        Grouping or listing of constants, that behave similarly to objects, but cannot be changed
-
-        For example = days of the week, days of the month, list of planets in our solar system
-         */
-
-        //Let's create an enum with the values of the periodic table
-
-
-        //There's two ways you can carry these values, either with a specified name or the name already listed from
-        // the table itself
-
-        System.out.println("Nitrogen, also known as " + PeriodicTable.NITROGEN.chemicalSymbol
-                + ", is what largely makes up the atmosphere");
-
-        PeriodicTable substance = PeriodicTable.CARBON;
-
-        System.out.println("Oxygen, with an atomic number of "+substance.atomicNumber
-                +", only holds 15 % of our atmosphere");
-
-
-        //The greatest example is the open java libraries themselves, where people can create their own custom
-        //enums to hold values (like the value of PI for example) to make coding a lot easier.
-
 
 
 //**********************************************************************************************************************
