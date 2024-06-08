@@ -321,6 +321,17 @@ public class Main {
         if we predefined our list as List.
 
          */
+
+        LinkedList<Double> JuanList = new LinkedList<>();
+        JuanList.add(6.9);
+        JuanList.add(8.4);
+        JuanList.add(8.9);
+
+        String[] JuanReports = new String[3];
+        JuanReports[0] = "Student misconduct";
+        JuanReports[1] = "Sleeps with teacher";
+        JuanReports[2] = "The teacher is pregnant";
+
         MyStudent Juan = new MyStudent("Juan", 13, 7, (LinkedList<Double>) JuanList, JuanReports);
 
         System.out.println("Juans scores is " + Juan.yourAv((LinkedList<Double>) JuanList));
@@ -872,15 +883,15 @@ public class Main {
 
         //In this example, we will make a class that registers students by name, age, grade and test scores
 
-        LinkedList<Double> JuanList = new LinkedList<>();
-        JuanList.add(6.9);
-        JuanList.add(8.4);
-        JuanList.add(8.9);
+        LinkedList<Double> JuanList1 = new LinkedList<>();
+        JuanList1.add(6.9);
+        JuanList1.add(8.4);
+        JuanList1.add(8.9);
 
-        String[] JuanReports = new String[3];
-        JuanReports[0] = "Student misconduct";
-        JuanReports[1] = "Sleeps with teacher";
-        JuanReports[2] = "The teacher is pregnant";
+        String[] JuanReports1 = new String[3];
+        JuanReports1[0] = "Student misconduct";
+        JuanReports1[1] = "Sleeps with teacher";
+        JuanReports1[2] = "The teacher is pregnant";
 
 
 
