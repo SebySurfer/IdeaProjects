@@ -337,9 +337,7 @@ public class Main {
         System.out.println("Juans scores is " + Juan.yourAv((LinkedList<Double>) JuanList));
 
 //**********************************************************************************************************************
-
-//----------------------------------------------------------------------------------------------------------------------
-        // Generics
+    // Generics
 
 /*
         Have you ever wondered if there could be a Class that can hold ANY kind of variable ?!? READ MORE !!!
@@ -548,8 +546,8 @@ public class Main {
         fellow programmers.
          */
 
-        /**
-         * Interfaces and Classes:
+        /*
+         Interfaces (I) and Classes (C):
          * -----------------------
          * (I) Collection<E>
          * ├── (I) List<E>
@@ -577,8 +575,9 @@ public class Main {
          * │   └── (C) TreeMap<K, V>
          * ├── (C) Hashtable<K, V>
          * └── (C) WeakHashMap<K, V>
-         *
-         * Implementations:
+
+
+         Implementations:
          * ----------------
          * 1. List:
          *    - ArrayList (C): Resizable-array implementation.
@@ -605,9 +604,6 @@ public class Main {
          * 8. Hashtable (C): Synchronized hash table implementation.
          * 9. WeakHashMap (C): Hash table implementation with weak keys.
          *
-
-
-
 
 
         //Collections Interface
@@ -905,14 +901,9 @@ public class Main {
         JuanReports1[2] = "The teacher is pregnant";
 
 
-
-//----------------------------------------------------------------------------------------------------------------------
-
         // --> 2D Arraylists
 
         LinkedList<LinkedList<Character>> abc = new LinkedList<>();
-
-
 
 
 
