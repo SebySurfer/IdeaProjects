@@ -281,6 +281,51 @@ public class Main {
 
          */
 
+//----------------------------------------------------------------------------------------------------------------------
+        /*
+        --> Casting
+
+        Casting in programming refers to the process of converting a value from one data type to another.
+        It's like telling the compiler to treat a variable as if it were of a different type.
+
+        In the context of arrays and ArrayLists in Java, casting is often necessary when retrieving elements,
+        especially if the data type of the elements is broader than what the variable can directly hold.
+
+        Because you initialized your list only as a List, and in your constructors your currently trying to get an
+        input as a "linked" list, then you have to make a CASTING to the program that can take a List (undefined) as a
+        LinkedList
+
+        If you already predefined it as a LinkList, you don't have to make this casting, because literally your giving
+        the constructor a linked list, and it expects a linked list. So no need to cast.
+
+        Another example of casting could be giving your program an integer when it expects a double.
+        Because if it expects a double, you can convert the information of type double to type int by "casting it",
+        like a magic spell
+
+        You cast a spell where you convert variable types. BUT WARNING !! sometimes this can lose variable information
+
+        Ex: Double x = 2.2
+
+        System.out,println( (int)x  ) ;
+
+        It will print out --> 2
+        (Which looses information of the decimal point)
+
+
+         */
+
+
+        /*
+        Because we already modified that our original list is a LinkedList, we don't need a cast, this is why they are
+        shown in gray (we can just delete them if we want to). For purposes of showing how the casting SHOULD of worked
+        if we predefined our list as List.
+
+         */
+        MyStudent Juan = new MyStudent("Juan", 13, 7, (LinkedList<Double>) JuanList, JuanReports);
+
+        System.out.println("Juans scores is " + Juan.yourAv((LinkedList<Double>) JuanList));
+
+
 //**********************************************************************************************************************
         //Serialization
 
@@ -838,49 +883,6 @@ public class Main {
         JuanReports[2] = "The teacher is pregnant";
 
 
-//----------------------------------------------------------------------------------------------------------------------
-        /*
-        --> Casting
-
-        Casting in programming refers to the process of converting a value from one data type to another.
-        It's like telling the compiler to treat a variable as if it were of a different type.
-
-        In the context of arrays and ArrayLists in Java, casting is often necessary when retrieving elements,
-        especially if the data type of the elements is broader than what the variable can directly hold.
-
-        Because you initialized your list only as a List, and in your constructors your currently trying to get an
-        input as a "linked" list, then you have to make a CASTING to the program that can take a List (undefined) as a
-        LinkedList
-
-        If you already predefined it as a LinkList, you don't have to make this casting, because literally your giving
-        the constructor a linked list, and it expects a linked list. So no need to cast.
-
-        Another example of casting could be giving your program an integer when it expects a double.
-        Because if it expects a double, you can convert the information of type double to type int by "casting it",
-        like a magic spell
-
-        You cast a spell where you convert variable types. BUT WARNING !! sometimes this can lose variable information
-
-        Ex: Double x = 2.2
-
-        System.out,println( (int)x  ) ;
-
-        It will print out --> 2
-        (Which looses information of the decimal point)
-
-
-         */
-
-
-        /*
-        Because we already modified that our original list is a LinkedList, we don't need a cast, this is why they are
-        shown in gray (we can just delete them if we want to). For purposes of showing how the casting SHOULD of worked
-        if we predefined our list as List.
-
-         */
-        MyStudent Juan = new MyStudent("Juan", 13, 7, (LinkedList<Double>) JuanList, JuanReports);
-
-        System.out.println("Juans scores is " + Juan.yourAv((LinkedList<Double>) JuanList));
 
 //----------------------------------------------------------------------------------------------------------------------
 
