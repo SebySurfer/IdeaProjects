@@ -849,47 +849,7 @@ public class Main {
 
 
 
-
-
-
-
-
-//**********************************************************************************************************************
-        //Collection Framework
-
-        /*
-
-        Provides an architecture to store and manipulate a group of objects
-
-        Analogy:
-            Piggy Bank = Collection framework
-
-            Coins = Objects
-
-        The collection framework subdivides into three parts:
-        1. Interfaces = (top most position of the hierarchy), holds abstract classes
-        2. Classes
-        3. Algorithms
-
-
-        The Java Collections Framework holds 3 kinds of interfaces, and objects to their respective interface:
-        1. List:
-        - ArrayList
-        - LinkedList
-        - Vector
-
-        2. Queue:
-        - ArrayDeque
-            Deque:
-            - PriorityQueue
-
-        3. Set:
-        - HashSet
-        - LinkedHashSet
-            SortedSet:
-            - TreeSet
-
-         */
+        
 
 //**********************************************************************************************************************
         //Vector Class (Implements List interface)
