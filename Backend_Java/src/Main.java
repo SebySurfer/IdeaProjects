@@ -849,7 +849,7 @@ public class Main {
 
 
 
-        
+
 
 //**********************************************************************************************************************
         //Vector Class (Implements List interface)
@@ -1210,7 +1210,96 @@ public class Main {
         System.out.println(newOrder);
 
 
+//**********************************************************************************************************************
+        // Set Interface
 
+        /*
+        - From the Java Collections Framework
+        - Doesn't allow any duplicate items (even if you add duplicates)
+        - Has no order of a list, or in any relation to an index
+
+
+        What is it used for, or when is it applied in ?
+        Whenever you want a collection of items and you don't want any duplicates and you don't particularly care
+        in what order they're in
+
+        Syntax = it is equal to using LinkedLists
+
+        Special Methods:
+        addAll() = allows you to get any collection and add all of its elements to another collection.
+        How ?
+
+        Set<WRAPPER_CLASS> NAME_OF_COLLECTION = new HashSet<>(OTHER_COLLECTION_TO_SET)
+
+        Implementations:
+
+        (Principle)
+
+        - HashSet = best preformance time inserting or retrieving, but with no ordering
+
+        - LinkedHashSet = slower, but keeps insertion ordering
+
+        - TreeSet = much slower, but the elements put into this set will be in their natural ordering
+
+
+        (Others)
+
+        - EnumSet
+        - SortedHashSet
+        - NavigableHash
+
+
+
+
+
+
+         */
+
+
+        //Hashet
+        Set<String> groceries = new HashSet<>();
+
+        groceries.add("Potato");
+        groceries.add("Salt");
+        groceries.add("Bread");
+        groceries.add("Butter");
+        groceries.add("Apple");
+
+        //Now lets try to add a few of the same items
+        groceries.add("Salt");
+        groceries.add("Butter");
+
+        System.out.println("HashSet List: "+groceries);
+
+
+        //LinkedHashet
+        Set<String> ordered_groceries = new LinkedHashSet<>(groceries);
+
+        System.out.println("LinkedHashSet List: "+ordered_groceries);
+
+        //HashMap
+
+        Set<String> nat_ord_groceries = new TreeSet<>(groceries);
+
+        System.out.println("TreeSet List: "+nat_ord_groceries);
+
+
+        //Here's another example in how you can first create a List and then add it to a Set
+
+        List<Integer> rep_numbers = new LinkedList<>();
+
+        rep_numbers.add(3);
+        rep_numbers.add(2);
+        rep_numbers.add(1);
+        rep_numbers.add(2);
+        rep_numbers.add(3);
+        rep_numbers.add(2);
+
+        System.out.println("List before adding to a Set: "+rep_numbers);
+
+        Set<Integer> unrep_numbers = new HashSet<>(rep_numbers);
+
+        System.out.println("List after adding to a Set: " + unrep_numbers);
 
 
 //**********************************************************************************************************************
@@ -1560,96 +1649,7 @@ public class Main {
         System.out.println(roomNumbers);
 
 
-//**********************************************************************************************************************
-        // Set Interface
 
-        /*
-        - From the Java Collections Framework
-        - Doesn't allow any duplicate items (even if you add duplicates)
-        - Has no order of a list, or in any relation to an index
-
-
-        What is it used for, or when is it applied in ?
-        Whenever you want a collection of items and you don't want any duplicates and you don't particularly care
-        in what order they're in
-
-        Syntax = it is equal to using LinkedLists
-
-        Special Methods:
-        addAll() = allows you to get any collection and add all of its elements to another collection.
-        How ?
-
-        Set<WRAPPER_CLASS> NAME_OF_COLLECTION = new HashSet<>(OTHER_COLLECTION_TO_SET)
-
-        Implementations:
-
-        (Principle)
-
-        - HashSet = best preformance time inserting or retrieving, but with no ordering
-
-        - LinkedHashSet = slower, but keeps insertion ordering
-
-        - TreeSet = much slower, but the elements put into this set will be in their natural ordering
-
-
-        (Others)
-
-        - EnumSet
-        - SortedHashSet
-        - NavigableHash
-
-
-
-
-
-
-         */
-
-
-        //Hashet
-        Set<String> groceries = new HashSet<>();
-
-        groceries.add("Potato");
-        groceries.add("Salt");
-        groceries.add("Bread");
-        groceries.add("Butter");
-        groceries.add("Apple");
-
-        //Now lets try to add a few of the same items
-        groceries.add("Salt");
-        groceries.add("Butter");
-
-        System.out.println("HashSet List: "+groceries);
-
-
-        //LinkedHashet
-        Set<String> ordered_groceries = new LinkedHashSet<>(groceries);
-
-        System.out.println("LinkedHashSet List: "+ordered_groceries);
-
-        //HashMap
-
-        Set<String> nat_ord_groceries = new TreeSet<>(groceries);
-
-        System.out.println("TreeSet List: "+nat_ord_groceries);
-
-
-        //Here's another example in how you can first create a List and then add it to a Set
-
-        List<Integer> rep_numbers = new LinkedList<>();
-
-        rep_numbers.add(3);
-        rep_numbers.add(2);
-        rep_numbers.add(1);
-        rep_numbers.add(2);
-        rep_numbers.add(3);
-        rep_numbers.add(2);
-
-        System.out.println("List before adding to a Set: "+rep_numbers);
-
-        Set<Integer> unrep_numbers = new HashSet<>(rep_numbers);
-
-        System.out.println("List after adding to a Set: " + unrep_numbers);
 
 
 //**********************************************************************************************************************
