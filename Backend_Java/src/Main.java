@@ -549,7 +549,6 @@ public class Main {
          */
 
         /**
-
          * Interfaces and Classes:
          * -----------------------
          * (I) Collection<E>
@@ -557,54 +556,86 @@ public class Main {
          * │   ├── (C) ArrayList<E>
          * │   ├── (C) LinkedList<E>
          * │   ├── (C) Vector<E>
-         * │   └── (C) Stack<E>
+         * │       └── (C) Stack<E>
          * ├── (I) Set<E>
          * │   ├── (C) HashSet<E>
          * │   ├── (C) LinkedHashSet<E>
-         * │   └── (C) TreeSet<E>
-         * ├── (I) Queue<E>
-         * │   ├── (C) LinkedList<E> (also implements Deque<E>)
-         * │   ├── (C) PriorityQueue<E>
-         * │   └── (C) ArrayDeque<E> (also implements Deque<E>)
-         * └── (I) Deque<E>
-         *     ├── (C) LinkedList<E> (also implements List<E> and Queue<E>)
-         *     └── (C) ArrayDeque<E> (also implements Queue<E>)
+         * │   └── (I) SortedSet<E>
+         * │       └── (C) TreeSet<E>
+         * └── (I) Queue<E>
+         *     ├── (C) LinkedList<E> (also implements Deque<E>)
+         *     ├── (C) PriorityQueue<E>
+         *     └── (C) ArrayDeque<E> (also implements Deque<E>)
+         *     └── (I) Deque<E>
+         *         ├── (C) LinkedList<E> (also implements List<E> and Queue<E>)
+         *         └── (C) ArrayDeque<E> (also implements Queue<E>)
          *
          * (I) Map<K, V>
          * ├── (C) HashMap<K, V>
          * ├── (C) LinkedHashMap<K, V>
-         * ├── (C) TreeMap<K, V>
+         * ├── (I) SortedMap<K, V>
+         * │   └── (C) TreeMap<K, V>
          * ├── (C) Hashtable<K, V>
          * └── (C) WeakHashMap<K, V>
-
-
+         *
          * Implementations:
          * ----------------
          * 1. List:
          *    - ArrayList (C): Resizable-array implementation.
          *    - LinkedList (C): Doubly-linked list implementation.
          *    - Vector (C): Synchronized resizable-array implementation.
-         *    - Stack (C): LIFO stack implementation.
+         *    - Stack (C): LIFO stack implementation (extends Vector).
          * 2. Set:
          *    - HashSet (C): Hash table implementation.
          *    - LinkedHashSet (C): Hash table and linked list implementation.
+         * 3. SortedSet:
          *    - TreeSet (C): Red-Black tree implementation.
-         * 3. Queue:
+         * 4. Queue:
          *    - LinkedList (C): Implements both List and Deque interfaces.
          *    - PriorityQueue (C): Priority heap implementation.
          *    - ArrayDeque (C): Resizable-array implementation.
-         * 4. Deque:
+         * 5. Deque:
          *    - LinkedList (C): Implements both List and Deque interfaces.
          *    - ArrayDeque (C): Resizable-array implementation.
-         * 5. Map:
+         * 6. Map:
          *    - HashMap (C): Hash table implementation.
          *    - LinkedHashMap (C): Hash table and linked list implementation.
+         * 7. SortedMap:
          *    - TreeMap (C): Red-Black tree implementation.
-         *    - Hashtable (C): Synchronized hash table implementation.
-         *    - WeakHashMap (C): Hash table implementation with weak keys.
-
-
+         * 8. Hashtable (C): Synchronized hash table implementation.
+         * 9. WeakHashMap (C): Hash table implementation with weak keys.
+         *
+         * Hierarchy Overview:
+         * -------------------
+         * (I) Collection<E>
+         * ├── (I) List<E>
+         * │   ├── (C) ArrayList<E>
+         * │   ├── (C) LinkedList<E>
+         * │   ├── (C) Vector<E>
+         * │       └── (C) Stack<E>
+         * ├── (I) Set<E>
+         * │   ├── (C) HashSet<E>
+         * │   ├── (C) LinkedHashSet<E>
+         * │   └── (I) SortedSet<E>
+         * │       └── (C) TreeSet<E>
+         * └── (I) Queue<E>
+         *     ├── (C) LinkedList<E> (also implements Deque<E>)
+         *     ├── (C) PriorityQueue<E>
+         *     └── (C) ArrayDeque<E> (also implements Deque<E>)
+         *     └── (I) Deque<E>
+         *         ├── (C) LinkedList<E> (also implements List<E> and Queue<E>)
+         *         └── (C) ArrayDeque<E> (also implements Queue<E>)
+         *
+         * (I) Map<K, V>
+         * ├── (C) HashMap<K, V>
+         * ├── (C) LinkedHashMap<K, V>
+         * ├── (I) SortedMap<K, V>
+         * │   └── (C) TreeMap<K, V>
+         * ├── (C) Hashtable<K, V>
+         * └── (C) WeakHashMap<K, V>
+         *
          */
+
 
 
 
