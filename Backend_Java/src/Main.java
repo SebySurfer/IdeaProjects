@@ -10,7 +10,9 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
 
 //**********************************************************************************************************************
-        //Interfaces
+        System.out.println("\n"+"* "+ "Interfaces" + "\n" + "-----");
+
+        // Interfaces
         /*
         Definition = it's a template that can be applied to a class. Similar to inheritance, but specifies what a clas
         has/must do, it cannot say HOW to do it.
@@ -84,8 +86,12 @@ public class Main {
 
         Knight.shield();
 
+        System.out.println("\n");
+
 
 //**********************************************************************************************************************
+        System.out.println("\n"+"* "+ "Lambdas" + "\n" + "-----");
+
         //Lambdas
 
         /*
@@ -132,6 +138,8 @@ public class Main {
 
 
 //**********************************************************************************************************************
+        System.out.println("\n"+"* "+ "Enums" + "\n" + "-----");
+
         //Enums
 
         /*
@@ -162,6 +170,8 @@ public class Main {
 
 
 //**********************************************************************************************************************
+        System.out.println("\n"+"* "+ "INPUT and OUTPUT" + "\n" + "-----");
+
         //INPUT and OUTPUT
 
         /*
@@ -282,7 +292,10 @@ public class Main {
          */
 
 //----------------------------------------------------------------------------------------------------------------------
+        System.out.println("\n"+"* "+ "Casting" + "\n" + "-----");
+
         /*
+
         --> Casting
 
         Casting in programming refers to the process of converting a value from one data type to another.
@@ -337,8 +350,8 @@ public class Main {
         System.out.println("Juans scores is " + Juan.yourAv((LinkedList<Double>) JuanList));
 
 //**********************************************************************************************************************
+        System.out.println("\n"+"* "+ "Generics" + "\n" + "-----");
 
-//----------------------------------------------------------------------------------------------------------------------
         // Generics
 
 /*
@@ -473,6 +486,8 @@ public class Main {
          */
 
 //----------------------------------------------------------------------------------------------------------------------
+        System.out.println("\n"+"* "+ "Wrapper Classes" + "\n" + "-----");
+
         // Wrapper Classes
 
         /*
@@ -532,6 +547,9 @@ public class Main {
 
 
 //----------------------------------------------------------------------------------------------------------------------
+        System.out.println("\n"+"* "+ "Collections Framework" + "\n" + "-----");
+
+
         //Collections Framework
 
         /*
@@ -548,64 +566,64 @@ public class Main {
         fellow programmers.
          */
 
-        /**
-
-         * Interfaces and Classes:
+        /*
+         Interfaces (I) and Classes (C):
          * -----------------------
          * (I) Collection<E>
          * ├── (I) List<E>
          * │   ├── (C) ArrayList<E>
          * │   ├── (C) LinkedList<E>
          * │   ├── (C) Vector<E>
-         * │   └── (C) Stack<E>
+         * │       └── (C) Stack<E>
          * ├── (I) Set<E>
          * │   ├── (C) HashSet<E>
          * │   ├── (C) LinkedHashSet<E>
-         * │   └── (C) TreeSet<E>
-         * ├── (I) Queue<E>
-         * │   ├── (C) LinkedList<E> (also implements Deque<E>)
-         * │   ├── (C) PriorityQueue<E>
-         * │   └── (C) ArrayDeque<E> (also implements Deque<E>)
-         * └── (I) Deque<E>
-         *     ├── (C) LinkedList<E> (also implements List<E> and Queue<E>)
-         *     └── (C) ArrayDeque<E> (also implements Queue<E>)
+         * │   └── (I) SortedSet<E>
+         * │       └── (C) TreeSet<E>
+         * └── (I) Queue<E>
+         *     ├── (C) LinkedList<E> (also implements Deque<E>)
+         *     ├── (C) PriorityQueue<E>
+         *     └── (C) ArrayDeque<E> (also implements Deque<E>)
+         *     └── (I) Deque<E>
+         *         ├── (C) LinkedList<E> (also implements List<E> and Queue<E>)
+         *         └── (C) ArrayDeque<E> (also implements Queue<E>)
          *
          * (I) Map<K, V>
          * ├── (C) HashMap<K, V>
          * ├── (C) LinkedHashMap<K, V>
-         * ├── (C) TreeMap<K, V>
+         * ├── (I) SortedMap<K, V>
+         * │   └── (C) TreeMap<K, V>
          * ├── (C) Hashtable<K, V>
          * └── (C) WeakHashMap<K, V>
 
 
-         * Implementations:
+         Implementations:
          * ----------------
          * 1. List:
          *    - ArrayList (C): Resizable-array implementation.
          *    - LinkedList (C): Doubly-linked list implementation.
          *    - Vector (C): Synchronized resizable-array implementation.
-         *    - Stack (C): LIFO stack implementation.
+         *    - Stack (C): LIFO stack implementation (extends Vector).
          * 2. Set:
          *    - HashSet (C): Hash table implementation.
          *    - LinkedHashSet (C): Hash table and linked list implementation.
+         * 3. SortedSet:
          *    - TreeSet (C): Red-Black tree implementation.
-         * 3. Queue:
+         * 4. Queue:
          *    - LinkedList (C): Implements both List and Deque interfaces.
          *    - PriorityQueue (C): Priority heap implementation.
          *    - ArrayDeque (C): Resizable-array implementation.
-         * 4. Deque:
+         * 5. Deque:
          *    - LinkedList (C): Implements both List and Deque interfaces.
          *    - ArrayDeque (C): Resizable-array implementation.
-         * 5. Map:
+         * 6. Map:
          *    - HashMap (C): Hash table implementation.
          *    - LinkedHashMap (C): Hash table and linked list implementation.
+         * 7. SortedMap:
          *    - TreeMap (C): Red-Black tree implementation.
-         *    - Hashtable (C): Synchronized hash table implementation.
-         *    - WeakHashMap (C): Hash table implementation with weak keys.
-
-
-         */
-
+         * 8. Hashtable (C): Synchronized hash table implementation.
+         * 9. WeakHashMap (C): Hash table implementation with weak keys.
+         *
 
 
         //Collections Interface
@@ -644,9 +662,20 @@ public class Main {
 
 //----------------------------------------------------------------------------------------------------------------------
 
-        //Lists
+        System.out.println("\n"+"* "+ "List Interface" + "\n" + "-----");
+
+        //List Interface
 
         /*
+
+         * ├── (I) List<E>
+         * │   ├── (C) ArrayList<E>
+         * │   ├── (C) LinkedList<E>
+         * │   ├── (C) Vector<E>
+         * │       └── (C) Stack<E>
+
+
+
         List is an interface from java library that enables you to modify the storage capacity of an array,
         basically just acting as a list
 
@@ -660,6 +689,7 @@ public class Main {
         * The variable type has to be declared in its full name, in other words,
         it doesn't use primitive types (meaning int, double, char, etc... How we usually call them).
         These are called 'Wrapper Class':
+
 
 
         ********************************************* IMPORTANT NOTE!!! ************************************************
@@ -893,9 +923,6 @@ public class Main {
         JuanReports1[2] = "The teacher is pregnant";
 
 
-
-//----------------------------------------------------------------------------------------------------------------------
-
         // --> 2D Arraylists
 
         LinkedList<LinkedList<Character>> abc = new LinkedList<>();
@@ -903,12 +930,20 @@ public class Main {
 
 
 
-
-
 //**********************************************************************************************************************
+        System.out.println("\n"+"* "+ "Vector Class" + "\n" + "-----");
+
+
         //Vector Class (Implements List interface)
 
         /*
+
+         * ├── (I) List<E>
+         * │   ├── (C) ArrayList<E>
+         * │   ├── (C) LinkedList<E>
+         * │   ├── (C) Vector<E>
+         * │       └── (C) Stack<E>
+
         Vectors are exactly the same as ArrayLists and LinkedLists, however, there's a great difference in performance.
 
         Main difference between the other object list classes and vectors:
@@ -1043,9 +1078,20 @@ public class Main {
          */
 
 //**********************************************************************************************************************
+        System.out.println("\n"+"* "+ "Stack Class" + "\n" + "-----");
+
         //Stack Class
 
         /*
+
+         * ├── (I) List<E>
+         * │   ├── (C) ArrayList<E>
+         * │   ├── (C) LinkedList<E>
+         * │   ├── (C) Vector<E>
+         * │       └── (C) Stack<E>
+
+
+
         In simple terms, think of a stack like a pile of plates in a cafeteria. When you add a new plate, you put it
         on top of the pile. When you want to take a plate, you take the one that's on the top of the pile.
 
@@ -1110,6 +1156,8 @@ public class Main {
          */
 
 //**********************************************************************************************************************
+        System.out.println("\n"+"* "+ "Queue Interface" + "\n" + "-----");
+
         //Queue Interface
 
         /*
@@ -1210,8 +1258,6 @@ public class Main {
         System.out.println(LineForStarbucks);
 
 
-
-
         //Deque
 
         /*
@@ -1265,9 +1311,20 @@ public class Main {
 
 
 //**********************************************************************************************************************
+        System.out.println("\n"+"* "+ "Set Interface" + "\n" + "-----");
+
         // Set Interface
 
         /*
+
+         * ├── (I) Set<E>
+         * │   ├── (C) HashSet<E>
+         * │   ├── (C) LinkedHashSet<E>
+         * │   └── (I) SortedSet<E>
+         * │       └── (C) TreeSet<E>
+
+
+
         - From the Java Collections Framework
         - Doesn't allow any duplicate items (even if you add duplicates)
         - Has no order of a list, or in any relation to an index
@@ -1296,16 +1353,11 @@ public class Main {
         - TreeSet = much slower, but the elements put into this set will be in their natural ordering
 
 
-        (Others)
+        (Others, Extra)
 
         - EnumSet
         - SortedHashSet
         - NavigableHash
-
-
-
-
-
 
          */
 
@@ -1357,9 +1409,20 @@ public class Main {
 
 
 //**********************************************************************************************************************
+        System.out.println("\n"+"* "+ "Map Interface" + "\n" + "-----");
+
         //Map Interface
 
          /*
+
+         * (I) Map<K, V>
+         * ├── (C) HashMap<K, V>
+         * ├── (C) LinkedHashMap<K, V>
+         * ├── (I) SortedMap<K, V>
+         * │   └── (C) TreeMap<K, V>
+         * ├── (C) Hashtable<K, V>
+         * └── (C) WeakHashMap<K, V>
+
 
         The map interface is present in java.util package represents a mapping between a key and a value.
 
@@ -1377,56 +1440,63 @@ public class Main {
         entries, removing entries, and looking up values based on their keys.
 
 
+
         --> Classes:
 
         * HashMap:
-        Purpose: Implements the Map interface to store key-value pairs, where keys must be unique. It allows quick operations like insertion, search, and deletion based on the key index.
-        Ordering: Does not maintain any order of insertion.
-        Note: Not synchronized, allows null elements, but only one null key.
+        - Purpose: Implements the Map interface to store key-value pairs, where keys must be unique. It allows quick
+            operations like insertion, search, and deletion based on the key index.
+        - Ordering: Does not maintain any order of insertion.
+        - Note: Not synchronized, allows null elements, but only one null key.
 
         * LinkedHashMap:
-        Purpose: Similar to HashMap but maintains the order of insertion of elements.
-        Ordering: Maintains the insertion order of elements.
-        Note: Provides quick insertion, search, and deletion, while also preserving the order of insertion.
+        - Purpose: Similar to HashMap but maintains the order of insertion of elements.
+        - Ordering: Maintains the insertion order of elements.
+        - Note: Provides quick insertion, search, and deletion, while also preserving the order of insertion.
+
+        * TreeMap:
+        - Purpose: Implements both the Map and NavigableMap interfaces, storing key-value pairs sorted according to the
+            natural ordering of keys or a provided comparator.
+        - Ordering: Orders elements based on the natural ordering of keys or a custom comparator.
+        - Note: Provides efficient sorting and storing of key-value pairs.
+
+        * Hashtable:
+        - Purpose: Fast key-value lookup.
+        - Ordering: No guaranteed order of elements.
+        - Note: Collisions are managed using specific strategies to keep operations efficient.
 
         * WeakHashMap:
-        Purpose: Implements the Map interface to store weak references to its keys, allowing entries to be garbage-collected when their keys are no longer referenced.
-        Ordering: Behaves similarly to HashMap but removes entries when keys are no longer strongly referenced.
-        Note: Useful for implementing registry-like data structures.
+        - Purpose: Implements the Map interface to store weak references to its keys, allowing entries to be
+            garbage-collected when their keys are no longer referenced.
+        - Ordering: Behaves similarly to HashMap but removes entries when keys are no longer strongly referenced.
+        - Note: Useful for implementing registry-like data structures.
 
-        * EnumMap
 
-        --> Interfaces:
+        (Extra:)
+
+        * ConcurrentHashMap:
+        - Purpose: Implements the Map interface, providing a thread-safe alternative to HashMap for concurrent access
+            by multiple threads.
+        - Ordering: Does not guarantee any particular order of elements.
+        - Note: Introduced in Java 5, offers better performance in multi-threaded environments compared to HashMap.
+
+        --> Sub Interfaces:
 
         # SortedMap:
-        Purpose: An interface extending the Map interface, providing a total ordering of its elements based on the natural order of keys.
-        Ordering: Stores elements in sorted order based on keys.
-        Note: Implemented by TreeMap.
+        - Purpose: An interface extending the Map interface, providing a total ordering of its elements based on the
+            natural order of keys.
+        - Ordering: Stores elements in sorted order based on keys.
+        - Note: Implemented by TreeMap.
 
-        # NavigableMap:
-        Purpose: An extension of SortedMap, providing navigation methods like lowerKey, floorKey, ceilingKey, and higherKey, along with sub-map creation methods.
-        Ordering: Supports methods for navigation and sub-map creation based on keys.
-        Note: Provides convenient ways to navigate through map elements.
-
-        Implementations:
-
-        - TreeMap:
-        Purpose: Implements both the Map and NavigableMap interfaces, storing key-value pairs sorted according to the natural ordering of keys or a provided comparator.
-        Ordering: Orders elements based on the natural ordering of keys or a custom comparator.
-        Note: Provides efficient sorting and storing of key-value pairs.
-
-        - ConcurrentHashMap:
-        Purpose: Implements the Map interface, providing a thread-safe alternative to HashMap for concurrent access by multiple threads.
-        Ordering: Does not guarantee any particular order of elements.
-        Note: Introduced in Java 5, offers better performance in multi-threaded environments compared to HashMap.
+                # NavigableMap:
+                - Purpose: An extension of SortedMap, providing navigation methods like lowerKey, floorKey,
+                    ceilingKey, and higherKey, along with sub-map creation methods.
+                - Ordering: Supports methods for navigation and sub-map creation based on keys.
+                - Note: Provides convenient ways to navigate through map elements.
 
 
          */
 
-
-
-
-        //--> Classes
 
         // * HashMap
 
@@ -1461,9 +1531,6 @@ public class Main {
         System.out.println(studentList);
 
         System.out.println(studentList.get(3));
-
-
-
 
 
 
@@ -1502,7 +1569,6 @@ public class Main {
             System.out.println(alphaUnlinked.get(x));
 
         }
-
 
 
 
@@ -1558,7 +1624,8 @@ public class Main {
         // deals with the top 3 best clients
         //However, we ignore the other two clients with the smallest buying price
 
-        double total_comission = (client_listings.get("Jacob") + client_listings.get("Lucia") + client_listings.get("Juan")) * 0.06;
+        double total_comission = (client_listings.get("Jacob") + client_listings.get("Lucia") +
+                client_listings.get("Juan")) * 0.06;
 
         //Now, lets disregard the clients we didn't tour in our list.
 
@@ -1707,6 +1774,8 @@ public class Main {
 
 
 //**********************************************************************************************************************
+        System.out.println("\n"+"* "+ "Serialization" + "\n" + "-----");
+
         //Serialization
 
         /*
@@ -1763,6 +1832,8 @@ public class Main {
 
 
 //**********************************************************************************************************************
+        System.out.println("\n"+"* "+ "Threads" + "\n" + "-----");
+
         //Threads
 
         /*
@@ -2098,6 +2169,8 @@ public class Main {
 
 
 //**********************************************************************************************************************
+        System.out.println("\n"+"* "+ "String Types" + "\n" + "-----");
+
         //String Types
 
         /*
