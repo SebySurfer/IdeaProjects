@@ -10,6 +10,8 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
 
 //**********************************************************************************************************************
+        System.out.println("\n"+"* "+ "Interfaces" + "\n" + "-----");
+
         //Interfaces
         /*
         Definition = it's a template that can be applied to a class. Similar to inheritance, but specifies what a clas
@@ -83,6 +85,8 @@ public class Main {
         Elius.fireball();
 
         Knight.shield();
+
+        System.out.println("\n");
 
 
 //**********************************************************************************************************************
