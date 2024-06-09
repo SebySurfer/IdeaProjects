@@ -12,7 +12,7 @@ public class Main {
 //**********************************************************************************************************************
         System.out.println("\n"+"* "+ "Interfaces" + "\n" + "-----");
 
-        //Interfaces
+        // Interfaces
         /*
         Definition = it's a template that can be applied to a class. Similar to inheritance, but specifies what a clas
         has/must do, it cannot say HOW to do it.
@@ -90,6 +90,8 @@ public class Main {
 
 
 //**********************************************************************************************************************
+        System.out.println("\n"+"* "+ "Lambdas" + "\n" + "-----");
+
         //Lambdas
 
         /*
@@ -136,6 +138,8 @@ public class Main {
 
 
 //**********************************************************************************************************************
+        System.out.println("\n"+"* "+ "Enums" + "\n" + "-----");
+
         //Enums
 
         /*
@@ -166,6 +170,8 @@ public class Main {
 
 
 //**********************************************************************************************************************
+        System.out.println("\n"+"* "+ "INPUT and OUTPUT" + "\n" + "-----");
+
         //INPUT and OUTPUT
 
         /*
@@ -286,7 +292,10 @@ public class Main {
          */
 
 //----------------------------------------------------------------------------------------------------------------------
+        System.out.println("\n"+"* "+ "Casting" + "\n" + "-----");
+
         /*
+
         --> Casting
 
         Casting in programming refers to the process of converting a value from one data type to another.
@@ -341,7 +350,9 @@ public class Main {
         System.out.println("Juans scores is " + Juan.yourAv((LinkedList<Double>) JuanList));
 
 //**********************************************************************************************************************
-    // Generics
+        System.out.println("\n"+"* "+ "Generics" + "\n" + "-----");
+
+        // Generics
 
 /*
         Have you ever wondered if there could be a Class that can hold ANY kind of variable ?!? READ MORE !!!
@@ -475,6 +486,8 @@ public class Main {
          */
 
 //----------------------------------------------------------------------------------------------------------------------
+        System.out.println("\n"+"* "+ "Wrapper Classes" + "\n" + "-----");
+
         // Wrapper Classes
 
         /*
@@ -534,6 +547,9 @@ public class Main {
 
 
 //----------------------------------------------------------------------------------------------------------------------
+        System.out.println("\n"+"* "+ "Collections Framework" + "\n" + "-----");
+
+
         //Collections Framework
 
         /*
@@ -645,6 +661,8 @@ public class Main {
 
 
 //----------------------------------------------------------------------------------------------------------------------
+
+        System.out.println("\n"+"* "+ "List Interface" + "\n" + "-----");
 
         //List Interface
 
@@ -913,6 +931,9 @@ public class Main {
 
 
 //**********************************************************************************************************************
+        System.out.println("\n"+"* "+ "Vector Class" + "\n" + "-----");
+
+
         //Vector Class (Implements List interface)
 
         /*
@@ -1057,6 +1078,8 @@ public class Main {
          */
 
 //**********************************************************************************************************************
+        System.out.println("\n"+"* "+ "Stack Class" + "\n" + "-----");
+
         //Stack Class
 
         /*
@@ -1133,6 +1156,8 @@ public class Main {
          */
 
 //**********************************************************************************************************************
+        System.out.println("\n"+"* "+ "Queue Interface" + "\n" + "-----");
+
         //Queue Interface
 
         /*
@@ -1233,8 +1258,6 @@ public class Main {
         System.out.println(LineForStarbucks);
 
 
-
-
         //Deque
 
         /*
@@ -1288,6 +1311,8 @@ public class Main {
 
 
 //**********************************************************************************************************************
+        System.out.println("\n"+"* "+ "Set Interface" + "\n" + "-----");
+
         // Set Interface
 
         /*
@@ -1384,6 +1409,8 @@ public class Main {
 
 
 //**********************************************************************************************************************
+        System.out.println("\n"+"* "+ "Map Interface" + "\n" + "-----");
+
         //Map Interface
 
          /*
@@ -1747,6 +1774,8 @@ public class Main {
 
 
 //**********************************************************************************************************************
+        System.out.println("\n"+"* "+ "Serialization" + "\n" + "-----");
+
         //Serialization
 
         /*
@@ -1803,6 +1832,8 @@ public class Main {
 
 
 //**********************************************************************************************************************
+        System.out.println("\n"+"* "+ "Threads" + "\n" + "-----");
+
         //Threads
 
         /*
@@ -2138,6 +2169,8 @@ public class Main {
 
 
 //**********************************************************************************************************************
+        System.out.println("\n"+"* "+ "String Types" + "\n" + "-----");
+
         //String Types
 
         /*
