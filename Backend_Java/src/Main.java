@@ -9,6 +9,15 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) throws InterruptedException {
 
+        //Note: DON'T waste your time with Declarative programming and simply continue with the Imerative apporach
+        /*
+        Basically, "declarative" programming makes your code more professional whilst saving extra lines, and you
+        describe the desired outcome without explicitly listing steps to get there. In reality it makes it a lot harder
+        to understand the logic of the code itself, as well as keeping almost the same length. To go to the formidabble
+        extent of knowing a whole different logic that is marked on the basis of someone's library is the same
+        absurdity as memorizing the dimensions of a tennis court for a written PE test instead of just playing tennis
+         */
+
 //**********************************************************************************************************************
         System.out.println("\n"+"* "+ "Interfaces" + "\n" + "-----");
 
@@ -1548,7 +1557,7 @@ public class Main {
         for(Character x : alphaLinked.keySet()){
             System.out.println(alphaLinked.get(x));
         }
-        
+
 
         /*
         Now, in the following example, we will demonstrate that whenever we print out the Map entirely, but for an
