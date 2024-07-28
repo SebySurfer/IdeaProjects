@@ -24,11 +24,30 @@ public class Main {
         //Static vs Non-Static
 
         /*
-        
+        Static variables are shared for all the instances made from a class. It is also mutable and can be
+        changed, however, these changes will be updated to all the instances made.
+
+        Non-static variables are common variables that are unique to every new instance, but cannot be referred to the
+        main class.
+
          */
 
+        My_F1_Factory Nissan = new My_F1_Factory("Nissan");
+        My_F1_Factory Redbull = new My_F1_Factory("Honda");
+
+        Redbull.CarInfo();
+
+        My_F1_Factory.CarCount();
 
 
+        /*Here its giving me a warning because yes, you can acces static variables from non-static ones, but it
+        also can create mass confusion. It can be seen as changing or getting an attribute from instance,
+        when in reality it's shared for all other instances.
+         */
+
+       // Nissan.CarCount();
+
+        
 
 
 //**********************************************************************************************************************
