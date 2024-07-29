@@ -9,13 +9,13 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) throws InterruptedException {
 
-        //Note: DON'T waste your time with Declarative programming and simply continue with the Imerative apporach
+        //Note: DON'T waste your time with Declarative programming and simply continue with the Imerative approach
         /*
         Basically, "declarative" programming makes your code more professional whilst saving extra lines, and you
-        describe the desired outcome without explicitly listing steps to get there. In reality it makes it a lot harder
+        describe the desired outcome without explicitly listing steps to get there. In reality, it makes it a lot harder
         to understand the logic of the code itself, as well as keeping almost the same length. To go to the formidabble
         extent of knowing a whole different logic that is marked on the basis of someone's library is the same
-        absurdity as memorizing the dimensions of a tennis court for a written PE test instead of just playing tennis
+        absurdity as memorizing the dimensions of a tennis court for a written PE test instead of just playing tennis.
          */
 
 //**********************************************************************************************************************
@@ -27,8 +27,8 @@ public class Main {
         Static variables are shared for all the instances made from a class. It is also mutable and can be
         changed, however, these changes will be updated to all the instances made.
 
-        Non-static variables are common variables that are unique to every new instance, but cannot be referred to the
-        main class.
+        Non-static variables are common variables that are unique to every new instance, but cannot be referenced to
+        the main class.
 
          */
 
@@ -40,20 +40,91 @@ public class Main {
         My_F1_Factory.CarCount();
 
 
-        /*Here its giving me a warning because yes, you can acces static variables from non-static ones, but it
-        also can create mass confusion. It can be seen as changing or getting an attribute from instance,
+        /*Here its giving a warning because yes, you can access static variables from non-static ones, but it
+        also can create mass confusion for coders. It can be seen as changing or getting an attribute from an instance,
         when in reality it's shared for all other instances.
          */
 
        // Nissan.CarCount();
 
-        
+
 
 
 //**********************************************************************************************************************
         System.out.println("\n"+"* "+ "Nested Classes" + "\n" + "-----");
 
         //Nested Classes
+
+        /*
+
+        Nested classes are classes within classes, and there's two kinds:
+
+        1. Non-Static Classes = (also known as inner classes) Can only be instantiated by an object instance of the
+        outer class (or class that surrounds it).
+
+
+        2. Static Classes = Can be instantiated independently without the need of an object instance, only the classes'
+        name.
+
+        * Shadowing = It's how to reference on the intended variable when having the same variable name for the inner
+        and outer class.
+
+         */
+
+
+        /*
+
+        Non-Static:
+        This is a way to create instances, but needing to make an instance of the outer class
+        You'll need to take off the static keyword for the Creature class for this to work properly
+
+        My_Magic_The_Gathering Neon_Dynasty = new My_Magic_The_Gathering();
+
+        My_Magic_The_Gathering.Creature Samurai =
+            Neon_Dynasty.new Creature("Samurai", 4, 5, "Haste");
+
+        My_Magic_The_Gathering.Creature Ninja =
+            Neon_Dynasty.new Creature("Ninja", 5, 1, "Reach");
+
+            Neon_Dynasty.getNumberOfCards();
+
+         */
+
+
+        //Static: This is a way to not have to make instaces of the outer class, just the inner classes
+        My_Magic_The_Gathering.Creature Samurai = new
+            My_Magic_The_Gathering.Creature("Samurai", 4, 5, "Haste");
+
+        My_Magic_The_Gathering.Creature Ninja = new
+            My_Magic_The_Gathering.Creature("Ninja", 5, 1, "Reach");
+
+
+        Samurai.getAbilities();
+
+        Ninja.getAbilities();
+
+        My_Magic_The_Gathering.getNumberOfCards();
+
+        /*
+        Methodology:
+        ------------
+
+        class Outer  >>> { class Inner }
+
+        Outer class >>>  { (Static Class) || (Non-Static Class) }
+
+            Static Class = No instance of the Outer class needed
+                Outer.Inner INNER_STATIC_CLASS = new Outer.Inner();
+
+
+
+            Non-Static Class = Instance of the Outer class needed for access of the inner class
+                Outer OUTER_CLASS = new Outer();
+                Outer.Inner INNER_CLASS = OUTER_CLASS.new Inner();
+
+
+         */
+
 
 
 
