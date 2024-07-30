@@ -126,6 +126,34 @@ public class Main {
          */
 
 
+        /*
+        Anonymous Classes
+        -----------------
+        It's an inner class without a name, where it's use is to make extras or changes to a specific object without
+        having to make a whole separate inner class within another class if you only plan on using it once
+         */
+
+        //This is without using an anonymous class, just keeping it simple
+        MyPrinter_Simple printer1 = new MyPrinter_Simple();
+
+        printer1.print();
+
+
+        MyPrinter_Simple printer2 = new MyPrinter_Simple(){
+
+            @Override
+            public void print(){
+                System.out.println("Hewo");
+            }
+
+        };
+
+        printer2.print();
+
+
+
+
+
 
 
 
